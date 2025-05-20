@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,18 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				crypto: {
+					'dark-blue': '#1A1F2C',
+					'blue': '#2F3A54',
+					'light-blue': '#4A5578',
+					'accent': '#8B5CF6',
+					'accent-light': '#A78BFA',
+					'green': '#10B981',
+					'red': '#EF4444',
+					'yellow': '#F59E0B',
+					'text': '#E5E7EB',
+					'text-secondary': '#9CA3AF'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +97,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-opacity': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-opacity': 'pulse-opacity 2s infinite',
+				'slide-up': 'slide-up 0.3s ease-out forwards'
 			}
 		}
 	},
